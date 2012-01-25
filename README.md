@@ -1,4 +1,7 @@
 # Fuzzy-filter
+
+[![Build Status](https://secure.travis-ci.org/stratuseditor/fuzzy-filter.png)](http://travis-ci.org/stratuseditor/fuzzy-filter)
+
 A [browserify](https://github.com/substack/node-browserify)-compatible
 fuzzy string filtering function.
 
