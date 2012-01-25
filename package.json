@@ -14,7 +14,7 @@
 , "main": "./index"
 , "scripts":
   { "prepublish":  "coffee -c index.coffee"
-  , "postpublish": "rm index.js"
+  , "postpublish": "rm ./index.js"
   , "test":        "mocha"
   }
 
