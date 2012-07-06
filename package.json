@@ -1,5 +1,5 @@
 { "name":        "fuzzy-filter"
-, "version":     "0.0.1"
+, "version":     "0.0.2"
 , "description": "a browserify-compatible fuzzy string filtering function"
 , "keywords":    ["stratus", "fuzzy", "filter", "browserify"]
 , "homepage":    "https://github.com/stratuseditor/fuzzy-filter"
@@ -12,11 +12,7 @@
   }
 
 , "main": "./index"
-, "scripts":
-  { "prepublish":  "coffee -c index.coffee"
-  , "postpublish": "rm ./index.js"
-  , "test":        "mocha"
-  }
+, "scripts": { "test": "mocha" }
 
 
 , "repository":
@@ -24,14 +20,9 @@
   , "url":  "https://github.com/stratuseditor/fuzzy-filter.git"
   }
 
-, "dependencies":
-  { "underscore": "1.2.x"
-  }
-
 , "devDependencies":
-  { "should":        "0.4.x"
-  , "mocha":         "0.x.x"
-  , "coffee-script": "1.x.x"
+  { "should":        "0.6.x"
+  , "mocha":         "1.x.x"
   }
 
 , "engines": { "node": ">=0.4.1" }
