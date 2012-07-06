@@ -30,46 +30,46 @@ Note: If `pre` is passed, you also have to pass `post` (and vice-versa).
 # Examples
 ## Simple usage
 
-    fuzzy = require 'fuzzy-filter'
-    fuzzy "cs", ["cheese", "pickles", "crackers", "pirate attack", "cs!!"]
-    # => ["cs!!", "cheese", "crackers"]
+    var fuzzy = require('fuzzy-filter')
+    fuzzy("cs", ["cheese", "pickles", "crackers", "pirate attack", "cs!!"])
+    // => ["cs!!", "cheese", "crackers"]
 
 ## Highlight match
 
-    fuzzy "cs", ["cheese", "pickles", "crackers", "pirate attack", "cs!!"],
-      pre:  "<b>"
-      post: "</b>"
-    # => ["<b>cs</b>!!", "<b>c</b>hee<b>s</b>e", "<b>c</b>racker<b>s</b>"]
+    fuzzy("cs", ["cheese", "pickles", "crackers", "pirate attack", "cs!!"],
+      { pre:  "<b>"
+      , post: "</b>" })
+    // => ["<b>cs</b>!!", "<b>c</b>hee<b>s</b>e", "<b>c</b>racker<b>s</b>"]
 
 ## Separator
 
-    fuzzy "cs", ["cookies", "cheese/pie", "fried/cheese", "cheese/cookies"],
-      pre:       "<b>"
-      post:      "</b>"
-      separator: "/"
-    # => [ "<b>c</b>ookie<b>s</b>"
-    #    , "fried/<b>c</b>hee<b>s</b>e"
-    #    , "cheese/<b>c</b>ookie<b>s</b>" ]
+    fuzzy("cs", ["cookies", "cheese/pie", "fried/cheese", "cheese/cookies"],
+      { pre:       "<b>"
+      , post:      "</b>"
+      , separator: "/" })
+    // => [ "<b>c</b>ookie<b>s</b>"
+    //    , "fried/<b>c</b>hee<b>s</b>e"
+    //    , "cheese/<b>c</b>ookie<b>s</b>" ]
 
-    fuzzy "cs/", ["cookies", "cheese/pie", "fried/cheese", "cheese/cookies"],
-      pre:       "<b>"
-      post:      "</b>"
-      separator: "/"
-    # => [ "<b>c</b>hee<b>s</b>e/pie"
-    #    , "<b>c</b>hee<b>s</b>e/cookies" ]
+    fuzzy("cs/", ["cookies", "cheese/pie", "fried/cheese", "cheese/cookies"],
+      { pre:       "<b>"
+      , post:      "</b>"
+      , separator: "/"})
+    // => [ "<b>c</b>hee<b>s</b>e/pie"
+    //    , "<b>c</b>hee<b>s</b>e/cookies" ]
   
-    fuzzy "cs/p", ["cookies", "cheese/pie", "fried/cheese", "cheese/cookies"],
-      pre:       "<b>"
-      post:      "</b>"
-      separator: "/"
-    # => ["<b>c</b>hee<b>s</b>e/<b>p</b>ie"]
+    fuzzy("cs/p", ["cookies", "cheese/pie", "fried/cheese", "cheese/cookies"],
+      { pre:       "<b>"
+      , post:      "</b>"
+      , separator: "/"})
+    // => ["<b>c</b>hee<b>s</b>e/<b>p</b>ie"]
   
-    fuzzy "cs/p", ["cookies", "cheese/pie", "fried/cheese", "cheese/cookies"],
-      pre:       "<b>"
-      post:      "</b>"
-      separator: "/"
-      separate:  true
-    # => [ ["<b>c</b>hee<b>s</b>e", "<b>p</b>ie"] ]
+    fuzzy("cs/p", ["cookies", "cheese/pie", "fried/cheese", "cheese/cookies"],
+      { pre:       "<b>"
+      , post:      "</b>"
+      , separator: "/"
+      , separate:  true })
+    // => [ ["<b>c</b>hee<b>s</b>e", "<b>p</b>ie"] ]
 
 
 # License
