@@ -1,5 +1,5 @@
 { "name":        "fuzzy-filter"
-, "version":     "0.0.2"
+, "version":     "0.0.3"
 , "description": "a browserify-compatible fuzzy string filtering function"
 , "keywords":    ["stratus", "fuzzy", "filter", "browserify"]
 , "homepage":    "https://github.com/stratuseditor/fuzzy-filter"
