@@ -93,6 +93,14 @@ describe("fuzzy-filter", function() {
     })
   })
   
+  describe("filter by backslash", function() {
+    it("does not error", function() {
+      (function() {
+        fuzzy("foo\\", ["123", "abc"])
+      }).should.not.throw()
+    })
+  })
+
   describe("when nothing matches", function() {
     var items = fuzzy("bla",
       [ "cheese"

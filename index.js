@@ -180,7 +180,7 @@ function makePattern(pattern) {
     , regex = []
     , char
   for (var i = 0; i < chars.length; i++) {
-    char = chars[i]
+    char = (chars[i] == "\\") ? "\\\\" : chars[i]
     regex.push("([" + char + "])")
   }
   return regex.join("[^/]*?")
